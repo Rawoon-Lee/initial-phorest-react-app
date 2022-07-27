@@ -5,14 +5,15 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import MyPhotos from './MyPhotos';
-import MyCalendar from './MyCalendar';
+// import MyCalendar from './MyCalendar';
+import { Calender } from './Calender';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
     <div
-      role="tabpanel"
+      role="tabpanel" 
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
@@ -63,7 +64,7 @@ export default function ActivityTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         내 활동 내역 달력으로 보기
-        <MyCalendar/>
+        <Calender/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         즐겨찾기 목록
